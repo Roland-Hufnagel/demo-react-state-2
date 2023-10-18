@@ -31,15 +31,17 @@ const topics = [
 export default function SearchResults({ searchTerm }) {
   const results = topics.filter((topic) => topic.includes(searchTerm));
 
-  if (!searchTerm || !results.length) {
-    return <p>No results</p>;
-  }
-
   return (
-    <ul>
-      {results.map((result) => (
-        <li key={result}>{result}</li>
-      ))}
-    </ul>
+    <section>
+      {!searchTerm || !results.length ? (
+        <p>No results</p>
+      ) : (
+        <ul>
+          {results.map((result) => (
+            <li key={result}>{result}</li>
+          ))}
+        </ul>
+      )}
+    </section>
   );
 }

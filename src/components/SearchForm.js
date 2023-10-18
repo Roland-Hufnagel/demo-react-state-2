@@ -3,12 +3,12 @@ export default function SearchForm() {
 
   function handleSubmit(event) {
     event.preventDefault();
-
+    
     console.log("submit");
   }
 
   return (
-    <>
+    <section>
       <form onSubmit={handleSubmit}>
         <label htmlFor="searchTerm">Search term:</label>
         <input name="searchTerm" id="searchTerm" />
@@ -24,6 +24,6 @@ export default function SearchForm() {
           ? `You searched for "${searchTerm}"`
           : "Please enter a search term"}
       </h2>
-    </>
+    </section>
   );
 }
