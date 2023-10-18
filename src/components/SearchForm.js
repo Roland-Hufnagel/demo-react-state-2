@@ -1,5 +1,5 @@
 export default function SearchForm() {
-  const searchTerm = "";
+  let searchTerm = "";
 
   function handleSubmit(event) {
     event.preventDefault();
