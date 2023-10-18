@@ -3,8 +3,9 @@ export default function SearchForm() {
 
   function handleSubmit(event) {
     event.preventDefault();
-    
-    console.log("submit");
+    searchTerm = event.target.searchTerm.value;
+    console.log("in submit");
+    console.log("searchTerm: ", searchTerm);
   }
 
   return (
